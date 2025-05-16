@@ -14,5 +14,9 @@ app.use(express.json());
 app.use('/api/productos', productRoutes);
 app.use('/api/auth', authRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Esta es una prueba de que mi servidor está funcionando correctamente.');
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Servidor en puerto ${PORT}`));
